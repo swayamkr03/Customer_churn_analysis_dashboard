@@ -3,6 +3,9 @@
 ## Project Overview
 This project analyzes customer churn using the IBM Telco Customer Churn dataset. The goal is to identify key churn drivers, build a machine learning model to predict churn probability, and present business insights through an interactive Power BI dashboard.
 
+## Live Dashboard
+The Power BI dashboard file is included in this repository. A Streamlit version is also available through `app.py` for public web deployment.
+
 ## Tools Used
 - Python
 - Pandas
@@ -12,6 +15,8 @@ This project analyzes customer churn using the IBM Telco Customer Churn dataset.
 - Matplotlib
 - Power BI
 - PostgreSQL
+- Streamlit
+- Plotly
 
 ## Dataset
 The dataset contains 7,043 customer records and 21 original columns. It includes customer demographics, account information, subscribed services, billing details, and churn status.
@@ -51,8 +56,9 @@ The Gradient Boosting model achieved the best performance.
 - Cleaned dataset: `data/processed/telco_churn_cleaned.csv`
 - Trained model: `models/gradient_boosting_churn_model.pkl`
 - Scored customer file: `outputs/churn_scored_customers.csv`
-- Power BI dashboard: `powerbi/customer_churn_dashboard.pbix`
+- Power BI dashboard: `powerbi/custom_churn_dashboard.pbix`
 - SQL queries: `sql/churn_analysis_queries.sql`
+- Streamlit dashboard app: `app.py`
 
 ## Dashboard Features
 The Power BI dashboard includes:
@@ -67,8 +73,38 @@ The Power BI dashboard includes:
 - Customer risk segment distribution
 - Interactive slicers for filtering customer groups
 
+The Streamlit dashboard includes:
+- KPI cards for customer count, churn rate, average churn probability, and high-risk customers
+- Interactive filters for risk segment, contract, internet service, and payment method
+- Overview charts for churn by customer attributes
+- Risk analysis charts based on model-generated churn probabilities
+- Customer-level high-risk lookup table
+
 ## PostgreSQL Analysis
 The scored customer dataset was loaded into a PostgreSQL table named:
 
 ```sql
 churn_scored_customers
+```
+
+SQL queries were used to analyze:
+- Customer count by risk segment
+- Average churn probability by contract type
+- Average churn probability by internet service
+- Average churn probability by payment method
+- Top high-risk customers
+
+## Run Streamlit Dashboard Locally
+Install dependencies and run:
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Business Recommendations
+- Focus retention campaigns on month-to-month customers.
+- Investigate service issues or pricing concerns among fiber optic customers.
+- Provide incentives for electronic check customers to switch to automatic payment methods.
+- Target high-risk customers with personalized offers before churn occurs.
+- Encourage long-term contracts through discounts or loyalty benefits.
