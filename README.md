@@ -80,6 +80,17 @@ The Streamlit dashboard includes:
 - Risk analysis charts based on model-generated churn probabilities
 - Customer-level high-risk lookup table
 
+## Dashboard Screenshots
+
+### Power BI Overview
+![Power BI Overview](screenshots/powerbi_overview.png)
+
+### Power BI Risk Analysis
+![Power BI Risk Analysis](screenshots/powerbi_risk_analysis.png)
+
+### Power BI Customer Details
+![Power BI Customer Details](screenshots/powerbi_customer_details.png)
+
 ## PostgreSQL Analysis
 The scored customer dataset was loaded into a PostgreSQL table named:
 
