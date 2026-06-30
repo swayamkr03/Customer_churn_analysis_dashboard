@@ -4,7 +4,11 @@
 This project analyzes customer churn using the IBM Telco Customer Churn dataset. The goal is to identify key churn drivers, build a machine learning model to predict churn probability, and present business insights through an interactive Power BI dashboard.
 
 ## Live Dashboard
-The Power BI dashboard file is included in this repository. A Streamlit version is also available through `app.py` for public web deployment.
+View the deployed interactive Streamlit dashboard here:
+
+[Open Live Dashboard](https://customerchurn-dashboard.streamlit.app/)
+
+The Power BI dashboard file is also included in this repository.
 
 ## Tools Used
 - Python
